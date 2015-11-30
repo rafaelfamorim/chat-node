@@ -81,8 +81,8 @@ function timeFormat(msTime) {
 
 $(document).ready(function() {
   //setup "global" variables first
-  //var url = "https://stflowprofile.herokuapp.com";
-  var url = "http://localhost:3000";
+  var url = "https://stflowprofile.herokuapp.com";
+  //var url = "http://localhost:3000";
   var socket = io.connect(url);
   var myRoomID = null;
 
