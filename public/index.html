@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="components/font-awesome/css/font-awesome.css">
   <link rel="stylesheet" href="css/flags.css">
   <link rel="stylesheet" href="css/app.css">
+  <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 </head>
 <body>
   <div class="main col-md-6 col-md-offset-3">
@@ -36,10 +37,10 @@
         </div>
         <form id="chatForm" class="form-inline">
           <div class="form-group">
-            <input type="text" class="form-control input-lg" placeholder="Your message" id="msg">
+            <input type="text" class="form-control input-lg" autocomplete="off" placeholder="Your message" id="msg">
           </div>
           <input type="submit" name="send" id="send" value="Send" class="btn btn-success btn-lg">
-          <input type="button" name="start_button" id="start_button" value="Record" onclick="startButton(event)" class="btn btn-info btn-lg">
+          <!-- <input type="button" name="start_button" id="start_button" value="Record" onclick="startButton(event)" class="btn btn-info btn-lg"> -->
           <div class="btn-group">
             <button type="button" class="btn btn-lg btn-info dropdown-toggle" data-toggle="dropdown" >
               Actions <span class="caret"></span>

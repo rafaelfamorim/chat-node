@@ -183,6 +183,15 @@ function purge(s, action) {
 	}
 }
 
+function getRandomColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#c0';
+    for (var i = 0; i < 4; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
 io.sockets.on("connection", function (socket) {
 
 	socket.on("joinserver", function(name, device) {
@@ -204,7 +213,7 @@ io.sockets.on("connection", function (socket) {
 			} while (!exists);
 			socket.emit("exists", {msg: "The username already exists, please pick another one.", proposedName: proposedName});
 		} else {
-			people[socket.id] = {"name" : name, "owns" : ownerRoomID, "inroom": inRoomID, "device": device};
+			people[socket.id] = {"name" : name, "owns" : ownerRoomID, "inroom": inRoomID, "device": device, "color": getRandomColor()};
 			socket.emit("update", "You have connected to the server.");
 			io.sockets.emit("update", people[socket.id].name + " is online.")
 			sizePeople = _.size(people);

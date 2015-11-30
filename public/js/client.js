@@ -81,7 +81,9 @@ function timeFormat(msTime) {
 
 $(document).ready(function() {
   //setup "global" variables first
-  var socket = io.connect("https://stflowprofile.herokuapp.com");
+  //var url = "https://stflowprofile.herokuapp.com";
+  var url = "http://localhost:3000";
+  var socket = io.connect(url);
   var myRoomID = null;
 
   $("form").submit(function(event) {
@@ -164,13 +166,14 @@ $(document).ready(function() {
   });
 
   socket.on("isTyping", function(data) {
+    var idName = data.person.replace(/\s/g, "-")
     if (data.isTyping) {
       if ($("#"+data.person+"").length === 0) {
-        $("#updates").append("<li id='"+ data.person +"'><span class='text-muted'><small><i class='fa fa-keyboard-o'></i> " + data.person + " is typing.</small></li>");
+        $("#updates").append("<li id='"+ idName+"'><span class='text-muted'><small><i class='fa fa-keyboard-o'></i> " + data.person + " is typing.</small></li>");
         timeout = setTimeout(timeoutFunction, 5000);
       }
     } else {
-      $("#"+data.person+"").remove();
+      $("#"+idName+"").remove();
     }
   });
 
@@ -371,9 +374,10 @@ socket.on("history", function(data) {
   });
 
   socket.on("chat", function(msTime, person, msg) {
-    $("#msgs").append("<li><strong><span class='text-success'>" + timeFormat(msTime) + person.name + "</span></strong>: " + msg + "</li>");
+    $("#msgs").append("<li><strong><span style='color:"+ person.color +"'>" + timeFormat(msTime) + person.name + "</span></strong>: " + msg + "</li>");
     //clear typing field
-     $("#"+person.name+"").remove();
+    var idName = person.name.replace(/\s/g, "-")
+     $("#"+idName+"").remove();
      clearTimeout(timeout);
      timeout = setTimeout(timeoutFunction, 0);
   });
