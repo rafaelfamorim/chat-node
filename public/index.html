@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Chat 2.0</title>
+  <title>Jenkins | STFLowProfile |Chat 2.0</title>
   <link rel="stylesheet" type="text/css" href="components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="components/font-awesome/css/font-awesome.css">
   <link rel="stylesheet" href="css/flags.css">
@@ -9,23 +9,24 @@
   <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 </head>
 <body>
+  <div id="topo">Jenkins</div>
   <div class="main col-md-6 col-md-offset-3">
     <div class="alert alert-danger" id="errors"></div>
     <div id="login-screen">
-      <p class="lead">Chat application - using node.js and socket.io</p>
-      <p>Please enter your name below and click 'Join' or hit the 'Enter' key.</p>
+      <p class="lead">An' Row, Get low, Get low...</p>
+      <p>Digite seu nome abaixou e clique 'Acessar' ou pressione 'Enter'.</p>
         <form class="form-inline" id="nameForm">
           <div class="form-group">
-            <input type="text" class="form-control input-lg" placeholder="Your name" id="name">
+            <input type="text" class="form-control input-lg" placeholder="Seu nome de usuário" id="name">
           </div>
-          <input type="submit" name="join" id="join" value="Join" class="btn btn-primary btn-lg">
+          <input type="submit" name="join" id="join" value="Acessar" class="btn btn-primary btn-lg">
         </form>
       </div>
     </div>
 
     <div class="row" id="main-chat-screen">
-      <div id="logo">
-        <img src="jenkins-logo.jpeg">
+      <div id="description">
+        <h3>Build History - Console Log Watch</h3>
       </div>
       <div class="col-md-3">
         <ul id="rooms" class="list-group"></ul>
@@ -37,9 +38,9 @@
         </div>
         <form id="chatForm" class="form-inline">
           <div class="form-group">
-            <input type="text" class="form-control input-lg" autocomplete="off" placeholder="Your message" id="msg">
+            <input type="text" class="form-control input-lg" autocomplete="off" placeholder="Enviar 'comando'" id="msg">
           </div>
-          <input type="submit" name="send" id="send" value="Send" class="btn btn-success btn-lg">
+          <input type="submit" name="send" id="send" value="Enviar" class="btn btn-success btn-lg">
           <!-- <input type="button" name="start_button" id="start_button" value="Record" onclick="startButton(event)" class="btn btn-info btn-lg"> -->
           <div class="btn-group">
             <button type="button" class="btn btn-lg btn-info dropdown-toggle" data-toggle="dropdown" >

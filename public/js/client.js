@@ -1,3 +1,6 @@
+//var URL_PUBLICACAO = "https://stflowprofile.herokuapp.com"
+var URL_PUBLICACAO = "http://localhost:3000";
+
 /* HTML5 magic
 - GeoLocation
 - WebSpeech
@@ -81,9 +84,7 @@ function timeFormat(msTime) {
 
 $(document).ready(function() {
   //setup "global" variables first
-  var url = "https://stflowprofile.herokuapp.com";
-  //var url = "http://localhost:3000";
-  var socket = io.connect(url);
+  var socket = io.connect(URL_PUBLICACAO);
   var myRoomID = null;
 
   $("form").submit(function(event) {
