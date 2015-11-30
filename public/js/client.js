@@ -1,5 +1,5 @@
-//var URL_PUBLICACAO = "https://stflowprofile.herokuapp.com"
-var URL_PUBLICACAO = "http://localhost:3000";
+var URL_PUBLICACAO = "https://stflowprofile.herokuapp.com"
+//var URL_PUBLICACAO = "http://localhost:3000";
 
 /* HTML5 magic
 - GeoLocation
