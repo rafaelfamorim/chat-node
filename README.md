@@ -1,4 +1,10 @@
-# Chat app written in node.js and socket.io
+## Chat Node
+
+Chat baseado no exemplo: https://github.com/tamaspiros/advanced-chat
+
+<hr>
+
+## Chat app written in node.js and socket.io
 
 ## Libraries used
 <ul>
@@ -57,3 +63,6 @@ Previous articles related to this topic:
   <li>http://tamas.io/simple-chat-application-using-node-js-and-socket-io/</li>
   <li>http://tamas.io/advanced-chat-using-node-js-and-socket-io-episode-1/</li>
 </ul>
+
+
+
